@@ -1,11 +1,18 @@
-# Download PyDictionary then import it
+
 from PyDictionary import PyDictionary
 
-pydict = PyDictionary()
+word = input("Enter a word: ")
 
-#get the word
-word = input("Type your word: ")
+dictionary = PyDictionary()
 
-meanings = pydict.meaning(word)
+meanings = dictionary.meaning(word)
 
-print(meanings)
+
+if meanings:
+    for part_of_speech, meaning_list in meanings.items():
+        print(f"{part_of_speech} meanings:",end=print('##################'))
+
+        for index, meaning in enumerate(meaning_list, start=1):
+            print(f"{index}. {meaning}")
+else:
+    print("No meanings found for the given word.")
