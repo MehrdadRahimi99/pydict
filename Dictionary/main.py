@@ -1,3 +1,4 @@
+
 from PyDictionary import PyDictionary
 
 word = input("Enter a word: ")
