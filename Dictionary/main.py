@@ -1,15 +1,13 @@
 
 from PyDictionary import PyDictionary
 
-word = input("Enter a word: ")
-
 dictionary = PyDictionary()
 
 
-def meaning():
+def print_meaning(word):
 
     meanings = dictionary.meaning(word)
-
+    
     if meanings:
         for part_of_speech, meaning_list in meanings.items():
             print(f"{part_of_speech} meanings:")
@@ -20,4 +18,14 @@ def meaning():
     else:
         print("No meanings found for the given word.")
 
-meaning()        
+
+def main():
+    while True:
+        word = input("Enter a word: ")
+        if word.strip():
+            print_meaning(word)
+        else:
+            print("please write a word")
+
+if __name__ == "__main__":
+    main()
