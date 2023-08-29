@@ -18,12 +18,19 @@ def print_meaning(word):
     else:
         print("No meanings found for the given word.")
 
+def print_synonym(word):
+
+    synonyms = dictionary.synonym(word)
+    print(synonyms)
+
 
 def main():
     while True:
         word = input("Enter a word: ")
+
         if word.strip():
             print_meaning(word)
+            print_synonym(word)
         else:
             print("please write a word")
 
