@@ -1,12 +1,12 @@
 
 from PyDictionary import PyDictionary
 
-dictionary = PyDictionary()
+dict = PyDictionary()
 
 
 def print_meaning(word):
 
-    meanings = dictionary.meaning(word)
+    meanings = dict.meaning(word)
     
     if meanings:
         for part_of_speech, meaning_list in meanings.items():
@@ -20,7 +20,7 @@ def print_meaning(word):
 
 def print_synonym(word):
 
-    synonyms = dictionary.synonym(word)
+    synonyms = dict.synonym(word)
     print(synonyms)
 
 
