@@ -21,7 +21,12 @@ def print_meaning(word):
 def print_synonym(word):
 
     synonyms = dict.synonym(word)
-    print(synonyms)
+    
+    if synonyms:
+        synonyms_str = ", ".join(synonyms)
+        print(f"Synonyms: {synonyms_str}")
+    else:
+        print("No synonyms found for the given word.")
 
 
 def main():
